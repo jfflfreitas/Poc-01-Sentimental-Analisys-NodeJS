@@ -4,30 +4,30 @@ var mysql = require('mysql');
 
 var connection = mysql.createPool({
     host: 'localhost',
-    user: 'xxxx', //----->Yor DB user here
-    password: 'xxxxx',//----->Yor DB password here
-    database: 'xxxx' //----->Yor database name here
+    user: 'xxxx', //----->Your DB user here
+    password: 'xxxxx',//----->Your DB password here
+    database: 'xxxx' //----->Your database name here
 });
 
 var watson = require('watson-developer-cloud');
 var conversation = watson.conversation({
-    username: 'xxxxxxxxx', //----->Yor Watson Conversation Service username  here
-    password: 'xxxxxxxxx', //----->Yor Watson Conversation Service password  here
+    username: 'xxxxxxxxx', //----->Your Watson Conversation Service username  here
+    password: 'xxxxxxxxx', //----->Your Watson Conversation Service password  here
     version: 'v1',
     version_date: '2017-05-26'
 });
 
 var NaturalLanguageUnderstandingV1 = require('watson-developer-cloud/natural-language-understanding/v1.js');
 var natural_language_understanding = new NaturalLanguageUnderstandingV1({
-    'username': 'xxxxxx', //----->Yor Watson NLU Service username  here
-    'password': 'xxxxxxx', //----->Yor Watson NLU Service password  here
+    'username': 'xxxxxx', //----->Your Watson NLU Service username  here
+    'password': 'xxxxxxx', //----->Your Watson NLU Service password  here
     'version_date': '2017-02-27'
 });
 
 var LanguageTranslatorV2 = require('watson-developer-cloud/language-translator/v2');
 var language_translator = new LanguageTranslatorV2({
-    username: 'xxxxxx', //----->Yor Watson Translator Service username  here
-    password: 'xxxxxx', //----->Yor Watson Translator Service password  here
+    username: 'xxxxxx', //----->Your Watson Translator Service username  here
+    password: 'xxxxxx', //----->Your Watson Translator Service password  here
     version: 'v2'
 });
 main();
@@ -94,7 +94,7 @@ async function main() {
 function message(workspace_id, message) {
     return new Promise((resolve, reject) => {
         conversation.message({
-            workspace_id: "xxxxxxx", //----->Yor Watson Coversation Service Workspace ID  here
+            workspace_id: "xxxxxxx", //----->Your Watson Coversation Service Workspace ID  here
             input: { 'text': message }
         }, function (err, response) {
             if (err)

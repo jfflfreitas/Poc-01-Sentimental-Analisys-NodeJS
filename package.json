@@ -1,0 +1,23 @@
+{
+  "name": "cap-test",
+  "version": "0.0.1",
+  "scripts": {
+    "execute": "node main.js",
+    "stt": "node main.js"
+  },
+  "dependencies": {
+    "colors": "^1.1.2",
+    "excel": "^0.1.7",
+    "fs-promise": "^2.0.3",
+    "node-csv": "^0.1.2",
+    "node-xlsx": "^0.11.2",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2",
+    "sleep": "^5.1.1",
+    "watson-developer-cloud": "^3.0.4",
+    "xlsx": "^0.11.17"
+  },
+  "engines": {
+    "node": "^7.7.4"
+  }
+}
